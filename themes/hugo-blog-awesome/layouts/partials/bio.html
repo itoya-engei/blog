@@ -52,6 +52,11 @@
         height="{{ $image1x.Height }}" />
     {{ end }}
     {{ end }}
-    <h2 class="author-name">{{ .Site.Params.author.intro }}</h2>
+    <div class="author-name-wrap">
+        <h2 class="author-name">{{ .Site.Params.author.intro }}</h2>
+        <a class="author-name-cat" href="{{ "secret-room/" | relURL }}" aria-label="Secret room">
+            {{ partial "svgs/cat.svg" (dict "height" 28 "width" 28) . }}
+        </a>
+    </div>
     <p class="author-bio">{{ .Site.Params.author.description }}</p>
 </div>

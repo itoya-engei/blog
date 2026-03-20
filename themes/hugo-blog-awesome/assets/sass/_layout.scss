@@ -34,6 +34,12 @@
     box-shadow: 0 24px 70px rgba(13, 18, 43, 0.12);
   }
 
+  .author-name-wrap {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.18rem;
+  }
+
   .author-name {
     font-size: 1.7em;
     margin-bottom: 2px;
@@ -42,6 +48,23 @@
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 1.2;
+  }
+
+  .author-name-cat {
+    color: $black;
+    line-height: 1;
+    transform: translateY(0.32rem);
+    opacity: 0.92;
+    transition: transform 150ms ease, opacity 150ms ease;
+  }
+
+  .author-name-cat svg {
+    display: block;
+  }
+
+  .author-name-cat:hover {
+    opacity: 1;
+    transform: translateY(0.28rem) scale(1.04);
   }
 
   .author-bio {
