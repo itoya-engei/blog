@@ -22,7 +22,6 @@ goToTop = true
 [params.author]
 intro = "Itoya Blog"
 name = "Tomoki Ono"
-description = "園芸や日々の記録を、写真と一緒にゆっくり積み上げるためのブログです。"
 
 [params.homepage]
 image = "images/home-hero.svg"
