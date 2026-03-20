@@ -13,6 +13,7 @@ email = "hello@example.com"
 sitename = "Itoya Blog"
 defaultColor = "auto"
 description = "Itoya Blog"
+ogimage = "images/ogp.png"
 mainSections = ["posts"]
 tocOpen = false
 dateFormat = "2006年01月02日"
