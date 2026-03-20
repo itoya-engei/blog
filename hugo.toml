@@ -19,6 +19,15 @@ dateFormat = "2006年01月02日"
 rssFeedDescription = "summary"
 goToTop = true
 
+[params.author]
+intro = "Itoya Blog"
+name = "Tomoki Ono"
+description = "園芸や日々の記録を、写真と一緒にゆっくり積み上げるためのブログです。"
+
+[params.homepage]
+image = "images/home-hero.svg"
+imageAlt = "トップページのメインビジュアル"
+
 [[params.socialIcons]]
 name = "github"
 url = "https://github.com/your-name"

@@ -1,7 +1,39 @@
 {{ $avatar_img := .Site.Params.author.avatar }}
 {{ $avatar_img_alt := .Site.Params.author.name }}
 {{ $image := resources.Get $avatar_img }}
+{{ $hero_img := .Site.Params.homepage.image }}
+{{ $hero_img_alt := .Site.Params.homepage.imageAlt | default .Site.Params.author.intro | default .Site.Title }}
+{{ $hero_resource := cond $hero_img (resources.Get $hero_img) nil }}
 <div class="author">
+    {{ with $hero_img }}
+    <div class="author-hero">
+        {{ with $hero_resource }}
+        {{ if eq .MediaType.SubType "svg" }}
+        <img
+            class="author-hero-image"
+            src="{{ .RelPermalink }}"
+            alt="{{ $hero_img_alt }}" />
+        {{ else }}
+        {{ $hero1x := .Resize "720x webp q85" }}
+        {{ $hero2x := .Resize "1200x webp q85" }}
+        <img
+            class="author-hero-image"
+            src="{{ $hero1x.RelPermalink }}"
+            srcset="{{ $hero1x.RelPermalink }} 1x, {{ $hero2x.RelPermalink }} 2x"
+            alt="{{ $hero_img_alt }}"
+            width="{{ $hero1x.Width }}"
+            height="{{ $hero1x.Height }}" />
+        {{ end }}
+        {{ else }}
+        {{ if or (hasPrefix . "http://") (hasPrefix . "https://") (hasPrefix . "/") }}
+        <img
+            class="author-hero-image"
+            src="{{ . }}"
+            alt="{{ $hero_img_alt }}" />
+        {{ end }}
+        {{ end }}
+    </div>
+    {{ end }}
     {{ with $image }}
     {{ if eq .MediaType.SubType "svg" }}
     <svg width="25em" height="25em" xmlns="http://www.w3.org/2000/svg">

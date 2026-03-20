@@ -21,6 +21,19 @@
     object-fit: cover;
   }
 
+  .author-hero {
+    margin: 0 auto 2rem;
+    max-width: 460px;
+  }
+
+  .author-hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 22px;
+    box-shadow: 0 24px 70px rgba(13, 18, 43, 0.12);
+  }
+
   .author-name {
     font-size: 1.7em;
     margin-bottom: 2px;
