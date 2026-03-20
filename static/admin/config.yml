@@ -4,6 +4,7 @@ backend:
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: auth
+  site_domain: itoya-engei.netlify.app
 
 site_url: https://itoya-engei.github.io/blog/
 display_url: https://itoya-engei.github.io/blog/
