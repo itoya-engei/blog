@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: itoya-engei/blog
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+site_url: https://itoya-engei.github.io/blog/
+display_url: https://itoya-engei.github.io/blog/
+logo_url: https://itoya-engei.github.io/blog/icons/favicon-32x32.png
+locale: ja
+
+media_folder: static/uploads
+public_folder: /blog/uploads
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: content/posts
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ" }
+      - { name: draft, label: Draft, widget: boolean, default: false }
+      - { name: description, label: Description, widget: text, required: false }
+      - { name: tags, label: Tags, widget: list, required: false }
+      - { name: categories, label: Categories, widget: list, required: false }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: pages
+    label: Pages
+    files:
+      - name: about
+        label: About
+        file: content/about.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: date, label: Date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ" }
+          - { name: draft, label: Draft, widget: boolean, default: false }
+          - { name: body, label: Body, widget: markdown }
