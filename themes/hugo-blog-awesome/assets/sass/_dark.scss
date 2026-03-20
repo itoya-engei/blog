@@ -173,6 +173,12 @@
     }
   }
 
+  .author {
+    .author-name {
+      color: $dark-white;
+    }
+  }
+
   // Post Item
   .post-item {
     &:not(:first-child) {
