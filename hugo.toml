@@ -1,0 +1,47 @@
+baseURL = "https://birdrunfast.com/"
+languageCode = "ja"
+defaultContentLanguage = "ja"
+title = "Itoya Blog"
+theme = "hugo-blog-awesome"
+disableKinds = ["rss"]
+
+[author]
+name = "Tomoki Ono"
+email = "hello@example.com"
+
+[params]
+sitename = "Itoya Blog"
+defaultColor = "auto"
+description = "Itoya Blog"
+mainSections = ["posts"]
+tocOpen = false
+dateFormat = "2006年01月02日"
+rssFeedDescription = "summary"
+goToTop = true
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/your-name"
+
+[[params.socialIcons]]
+name = "x"
+url = "https://x.com/your-name"
+
+[[params.socialIcons]]
+name = "rss"
+url = "/index.xml"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Posts"
+url = "/posts/"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 3
