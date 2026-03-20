@@ -54,17 +54,14 @@
     color: $black;
     line-height: 1;
     transform: translateY(0.32rem);
-    opacity: 0.92;
+    opacity: 0.38;
+    pointer-events: none;
+    cursor: default;
     transition: transform 150ms ease, opacity 150ms ease;
   }
 
   .author-name-cat svg {
     display: block;
-  }
-
-  .author-name-cat:hover {
-    opacity: 1;
-    transform: translateY(0.28rem) scale(1.04);
   }
 
   .author-bio {

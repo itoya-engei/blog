@@ -180,6 +180,14 @@
 
     .author-name-cat {
       color: $dark-white;
+      opacity: 0.95;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+
+    .author-name-cat:hover {
+      opacity: 1;
+      transform: translateY(0.28rem) scale(1.04);
     }
   }
 
