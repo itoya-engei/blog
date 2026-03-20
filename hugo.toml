@@ -24,7 +24,7 @@ intro = "Itoya Blog"
 name = "Tomoki Ono"
 
 [params.homepage]
-image = "images/home-hero.svg"
+image = "images/top.jpg"
 imageAlt = "トップページのメインビジュアル"
 
 [[params.socialIcons]]
